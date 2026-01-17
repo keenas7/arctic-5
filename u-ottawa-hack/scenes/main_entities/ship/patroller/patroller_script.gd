@@ -1,5 +1,5 @@
 extends Ship
-
+class_name  Patroller
 var begin_new_nav : bool = false
 
 

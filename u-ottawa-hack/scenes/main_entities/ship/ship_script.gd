@@ -11,19 +11,17 @@ class_name Ship
 #@export var sprite_path: String = "res://sprites/ships/frigate.png"
 var navigator : NavigationAgent2D
 var speed: float = 500
-var current_target_port: Port = null
-# var is_traveling: bool = false
+var current_target_port = null
+var is_traveling: bool = false
 
-
-#var begin_new_nav : bool = false
-var route : Array[Port]
+var route : Array
 
 func _ready() -> void:
 	shipSetup()
 
 func shipSetup() -> void:
 	navigator = get_node("NavigationAgent2D") #target_pos tells nav agent to calculate path to pos
-	# print(navigator)
+	#print(navigator)
 	navigator.navigation_finished.connect(onNavComplete) #when onNavComplete, navigation is finished
 
 

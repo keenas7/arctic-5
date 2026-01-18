@@ -2,10 +2,11 @@
 
 [ext_resource type="Script" uid="uid://nyn773ypmtec" path="res://scenes/graph_cool.gd" id="1_nti8y"]
 
-[node name="graph_cool" type="Control"]
+[node name="graph_cool" type="Control" node_paths=PackedStringArray("metric_name")]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_nti8y")
+metric_name = NodePath("Label")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0

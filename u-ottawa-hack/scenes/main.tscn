@@ -1,0 +1,157 @@
+
+[gd_scene load_steps=16 format=3 uid="uid://c2wpcvusn42y3"]
+
+[ext_resource type="PackedScene" uid="uid://bemkcqiewooyc" path="res://scenes/main_entities/ship/Ship.tscn" id="1_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://bfybw12ukde7w" path="res://Camera Components/Draggable/DraggableCameraComponent.tscn" id="2_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://cq7551clg4y5v" path="res://Camera Components/Zoom/ZoomCameraComponent.tscn" id="3_tbgi4"]
+[ext_resource type="Script" uid="uid://do758wjjpq5qg" path="res://scenes/main_entities/ship/test.gd" id="3_tefeu"]
+[ext_resource type="Script" uid="uid://7oj702flyksh" path="res://UI/ship_port_ui.gd" id="4_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://depgxb5cx5ren" path="res://Ocean_Frames/oceanTiled.png" id="5_choun"]
+[ext_resource type="Script" uid="uid://bf0tkud5ua505" path="res://scenes/animated_sprite_2d_2.gd" id="5_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://cdf0nmcl73s1s" path="res://scenes/main_entities/ship/patroller/patroller.tscn" id="6_eb6dy"]
+[ext_resource type="Script" uid="uid://tdro7wchqu2b" path="res://scenes/ship_info_ui.gd" id="6_tefeu"]
+[ext_resource type="Texture2D" uid="uid://d1fknsbsd4eag" path="res://Ocean_Frames/OceanTiledf2.png" id="6_ya4ey"]
+[ext_resource type="Texture2D" uid="uid://b3a1dgwdjy8ho" path="res://Ocean_Frames/OceanTiledf3.png" id="7_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://cl5fbu5tpgqpu" path="res://Islands/Map.svg" id="7_ya4ey"]
+[ext_resource type="Texture2D" uid="uid://c6bffnuchkwog" path="res://Ocean_Frames/OceanTiledf4.png" id="8_trceg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tefeu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_choun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ya4ey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_eb6dy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_trceg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_7mycd"]
+vertices = PackedVector2Array(8718.281, -5408.9375, 7011.328, 7279.3984, 815.35156, 1000, 801.2422, 947.3203, 1268.6797, 535.2422, 801.2422, 1052.6797, 1321.3516, 444, 1307.2422, 391.3203, 1200.2891, 108.03125, 1268.6797, 352.7578, 1177.6016, 303.9922, 1216, 338.64844, 1163.3203, 352.7578, 1103.0625, 397.71094, 1124.7578, 391.3203, 1110.6484, 444, -179.78906, -222, -103.3125, -257.5625, -85.34375, -167.71094, -52.28125, 134.71094, 1139.1797, -5.7734375, -4920.9375, -3174.3438, 988.10156, -72, 755.71094, -72, 91.82031, -416.70313, -6037.8516, 6414.711, 657.3203, 1091.2422, 762.6797, 1091.2422, 560.47656, 431.40625, 488.5703, 14.4296875, 390.07813, 55.460938, 332.92188, -38.570313, 244.54688, -247.45313, 557.40625, 76.72656, 507.3672, 81.28125, 566.9922, 19.25, -89.32031, -389.1328, -124.03125, -487.46094, 1124.7578, 496.6797, 540.6797, 451.2422, 710, 1105.3516, 389.2578, 442.0703, 423.97656, 439.89844, 435.3203, 451.2422, 762.6797, 908.7578, -14.6328125, -77.35156, -310.3828, -222, 22.273438, 364.59375, 488, 465.35156, 1163.3203, 535.2422, 1307.2422, 496.6797, 618.7578, 1052.6797, 604.64844, 1000, 618.7578, 947.3203, 657.3203, 908.7578, 710, 894.64844, -319.0078, -571.3203, -482, -463.3672, -482, -408.09375, 1216, 549.35156)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 2, 1), PackedInt32Array(0, 6, 7), PackedInt32Array(8, 0, 7, 9), PackedInt32Array(10, 8, 9, 11), PackedInt32Array(10, 11, 12), PackedInt32Array(13, 10, 12, 14), PackedInt32Array(13, 14, 15), PackedInt32Array(16, 17, 18, 19), PackedInt32Array(0, 8, 20), PackedInt32Array(21, 0, 20, 22), PackedInt32Array(21, 22, 23, 24), PackedInt32Array(1, 25, 21, 26), PackedInt32Array(27, 5, 1), PackedInt32Array(28, 13, 15), PackedInt32Array(29, 30, 31, 32), PackedInt32Array(33, 34, 29, 35), PackedInt32Array(24, 36, 37), PackedInt32Array(28, 15, 38, 39), PackedInt32Array(40, 27, 1), PackedInt32Array(41, 42, 43, 44), PackedInt32Array(18, 45, 19), PackedInt32Array(46, 16, 19, 47), PackedInt32Array(23, 35, 29, 32, 24), PackedInt32Array(44, 48, 39, 38, 49, 3), PackedInt32Array(50, 6, 0), PackedInt32Array(26, 40, 1), PackedInt32Array(51, 26, 21), PackedInt32Array(52, 51, 21), PackedInt32Array(53, 52, 21), PackedInt32Array(54, 53, 21), PackedInt32Array(55, 54, 21), PackedInt32Array(21, 24, 37, 56), PackedInt32Array(21, 56, 57), PackedInt32Array(21, 57, 58), PackedInt32Array(44, 55, 21, 47), PackedInt32Array(21, 58, 46, 47), PackedInt32Array(44, 47, 41), PackedInt32Array(44, 43, 48), PackedInt32Array(3, 49, 59), PackedInt32Array(3, 59, 4), PackedInt32Array(0, 4, 50)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-4930, -3183, 8730, -5421, 7020, 7290, -6049, 6424)])
+
+[sub_resource type="LabelSettings" id="LabelSettings_sugp2"]
+font_size = 32
+
+[node name="main" type="Node"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+repeat_size = Vector2(2252, 1126)
+repeat_times = 7
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Parallax2D"]
+z_index = -1
+position = Vector2(84.999954, 24.087526)
+scale = Vector2(3.6749995, 3.3595004)
+sprite_frames = SubResource("SpriteFrames_tefeu")
+frame_progress = 0.33244202
+script = ExtResource("5_ya4ey")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_7mycd")
+
+[node name="Patroller" parent="NavigationRegion2D" instance=ExtResource("6_eb6dy")]
+
+[node name="Ship" parent="NavigationRegion2D" instance=ExtResource("1_tbgi4")]
+
+[node name="Node2D" type="Node2D" parent="NavigationRegion2D"]
+position = Vector2(833.4725, 656.552)
+
+[node name="BigIsland" type="StaticBody2D" parent="NavigationRegion2D"]
+scale = Vector2(2, 2)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NavigationRegion2D/BigIsland"]
+polygon = PackedVector2Array(-48, -136, -38, -86, -2, -40, -21, 67, 15, 178, 195, 216, 549, 194, 584, 150, 595, 55, 566, 1, 493, -31, 379, -31, 288, 13, 283, 43, 250, 46, 241, 14, 193, 34, 162, -17, 118, -121, 44, -203, -48, -189, -66, -240, -159, -280, -236, -229, -236, -206, -153, -116, -91, -116)
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/BigIsland"]
+position = Vector2(617.99994, 392.99997)
+scale = Vector2(5, 5)
+texture = ExtResource("7_ya4ey")
+
+[node name="Node2D2" type="Node2D" parent="NavigationRegion2D"]
+script = ExtResource("3_tefeu")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Draggable Camera Component" parent="Camera2D" instance=ExtResource("2_jyhfs")]
+InputMapName = "left-click"
+DoVelocity = true
+Decay = 0.95
+
+[node name="Zoom Camera Component" parent="Camera2D" instance=ExtResource("3_tbgi4")]
+
+[node name="UI layer" type="CanvasLayer" parent="."]
+
+[node name="Ship Port UI" type="ColorRect" parent="UI layer"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = -1
+anchor_right = 0.37800002
+anchor_bottom = 1.0
+offset_right = 4.543976
+grow_vertical = 2
+color = Color(0, 0, 0, 0.49803922)
+script = ExtResource("4_jyhfs")
+
+[node name="Label" type="Label" parent="UI layer/Ship Port UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.142
+offset_top = 1.0
+offset_bottom = -0.01600647
+text = "ships in port:"
+label_settings = SubResource("LabelSettings_sugp2")
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI layer/Ship Port UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.16000001
+anchor_right = 1.0
+anchor_bottom = 1.0020001
+offset_top = 0.31999207
+offset_right = -1.0
+offset_bottom = -0.29608154
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI layer/Ship Port UI/ScrollContainer"]
+layout_mode = 2
+focus_behavior_recursive = 1
+
+[node name="exit button" type="Button" parent="UI layer/Ship Port UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.88600004
+anchor_right = 1.0
+anchor_bottom = 0.07700001
+offset_left = 0.15997314
+offset_bottom = 0.10399628
+focus_mode = 0
+text = "X"
+
+[node name="ShipInfoUI" type="ColorRect" parent="UI layer"]
+unique_name_in_owner = true
+visible = false
+offset_right = 1152.0
+offset_bottom = 195.0
+color = Color(0.49803922, 0.49803922, 0.49803922, 0.49803922)
+script = ExtResource("6_tefeu")
+
+[node name="Label" type="Label" parent="UI layer/ShipInfoUI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Ship Info:	[name] [type]
+velocity: ##, fuel: ##, max fuel: ##, consumption rate: ##"
+
+[connection signal="pressed" from="UI layer/Ship Port UI/exit button" to="UI layer/Ship Port UI" method="closeMenu"]

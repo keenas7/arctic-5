@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=3 uid="uid://yrjnyym35e5k"]
+
+[ext_resource type="Script" uid="uid://nyn773ypmtec" path="res://scenes/graph_cool.gd" id="1_nti8y"]
+
+[node name="graph_cool" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_nti8y")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -186.5
+offset_top = -196.0
+offset_right = 187.0
+offset_bottom = 170.0
+color = Color(0, 0, 0, 0.5254902)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -163.0
+offset_top = -170.0
+offset_right = 187.5
+offset_bottom = 147.0
+color = Color(1, 1, 1, 0.5254902)
+
+[node name="Node2D" type="Node2D" parent="ColorRect2"]
+
+[node name="Node2D3" type="Node2D" parent="ColorRect2"]
+position = Vector2(350.5, 317)
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = -18.0
+offset_top = 147.0
+offset_right = 18.0
+offset_bottom = 170.0
+text = "time"
+
+[node name="Lower Number" type="Label" parent="."]
+layout_mode = 0
+offset_left = -186.0
+offset_top = 148.0
+offset_right = -150.0
+offset_bottom = 171.0
+text = "111"
+
+[node name="Upper Number" type="Label" parent="."]
+layout_mode = 0
+offset_left = -186.0
+offset_top = -196.0
+offset_right = -167.0
+offset_bottom = -173.0
+text = "11"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -186.0
+offset_top = 18.0
+offset_right = -150.0
+offset_bottom = 41.0
+rotation = -1.5707964
+text = "fuel"
